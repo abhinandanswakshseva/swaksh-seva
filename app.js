@@ -6,6 +6,7 @@ import imageRoute from "./routes/imageRoutes.js";
 import authRoute from "./routes/authRoutes.js";
 import cors from "cors";
 import path from "path";
+import { log } from "console";
 config({ path: "./config/config.env" });
 
 export const app = express();
@@ -22,6 +23,8 @@ app.use(
   })
 );
 // Routes
-
+app.use("/", async(req,res)=>{
+    res.send("Server Working")
+})
 app.use("/api/users",authRoute);
 app.use("/api", imageRoute)
