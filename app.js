@@ -18,8 +18,6 @@ app.use(
   })
 );
 // Routes
-app.use("/", async(req,res)=>{
-    res.send("Server Working")
-})
+
 app.use("/api/users",authRoute);
 app.use("/api", imageRoute)
