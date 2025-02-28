@@ -17,7 +17,7 @@ export const registerUser = async (req, res) => {
     if(existingUser){
       return res.status(400).json({ status:false, message: "Email Already registered" });
     }
-    const isAdminUser = username === "galaxyfoundationtrust" ? true : false;
+    const isAdminUser = username === "abhinandanswakshseva" ? true : false;
 
     const hashedPassword = await bcrypt.hash(password, 10);
     const newUser = new User({ username,email, password: hashedPassword, isAdmin: isAdminUser });

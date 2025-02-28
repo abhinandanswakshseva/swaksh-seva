@@ -6,7 +6,6 @@ import imageRoute from "./routes/imageRoutes.js";
 import authRoute from "./routes/authRoutes.js";
 import cors from "cors";
 import path from "path";
-import { log } from "console";
 config({ path: "./config/config.env" });
 
 export const app = express();
